@@ -1,12 +1,22 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { Employees } from './modules/employees/employees';
+import { Departments } from './modules/departments/departments';
+import { Salaries } from './modules/salaries/salaries';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css'],
+
+  imports: [ 
+    Employees,
+    Departments,
+    Salaries],
+    providers: []
 })
-export class App {
-  protected readonly title = signal('GN3Nominas');
+export class app {
+
+  constructor(){
+  }
+
 }

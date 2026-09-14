@@ -1,0 +1,103 @@
+<div class="row mt-3">
+    <button class="btn  col-auto ms-auto" type="button" (click)="dialogAddSalary();"><i
+            class="bi bi-plus-circle-fill mright"></i>Agregar Sueldo</button>
+</div>
+@if (showdialog) {
+<div class="row mt-3">
+
+    <div class="col-md-2">
+        <label for="txtEmpId" class="from-label">CLAVE EMPLEADO</label>
+        <input type="number" name="id" id="txtEmpId" class="form-control" [(ngModel)]="Salary_.EmpId" disabled="false">
+    </div>
+    <div class="col-md-2">
+        <label for="txtQty" class="from-label">SUELDO</label>
+        <input type="number" name="id" id="txtQty" class="form-control" [(ngModel)]="Salary_.Qty">
+    </div>
+        <div class="col-md-4">
+        <label for="txtPayId" class="from-label">FORMA DE PAGO</label>
+        <input type="number" name="id" id="txtPayId" class="form-control" [(ngModel)]="Salary_.PayId">
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col">
+        <button class="btn btn-success" type="button" (click)="onAddSalary(Salary_)">Agregar</button>
+        <!--
+      <button class="btn btn-warning m-2" type="button" (click)="onUpdateSalary(Salary_)">Modificar</button>
+      <button class="btn btn-danger" type="button" (click)="onDeleteSalary(Salary_.DeptId)">Eliminar</button>
+      <button class="btn btn-primary m-2" type="button" (click)="clear()">Limpiar</button>-->
+        <button class="btn btn-primary m-2" type="button" (click)="showdialog=false;clear();">Cancelar</button>
+    </div>
+
+</div>
+}
+<div class="row mt-3">
+    <div class="col">
+
+        <table class="table table-bordered align-middle">
+            <thead class="table-light">
+                <tr>
+                    <th></th>
+                    <th>EMPLEADO</th>
+                    <th>SUELDO</th>
+                    <th>FORMA DE PAGO</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of datatable(); track item.DeptId) {
+                <tr>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <input type="text" class="form-control" [(ngModel)]="editRow.EmpId" disabled="true" />
+                        } @else {
+                        {{ item.EmpId }}
+                        }
+                    </td>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <input type="text" class="form-control" [(ngModel)]="editRow.EmpId" />
+                        } @else {
+                        {{ item.FullName }}
+                        }
+                    </td>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <input type="number" class="form-control" [(ngModel)]="editRow.Qty" />
+                        } @else {
+                        {{ item.Qty }}
+                        }
+                    </td>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <input type="number" class="form-control" [(ngModel)]="editRow.PayId" />
+                        } @else {
+                        {{ item.PayDesc }}
+                        }
+                    </td>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <button class="btn btn-success btn-sm me-1" (click)="onSave()">
+                            Guardar
+                        </button>
+                        <button class="btn btn-secondary btn-sm" (click)="onCancel()">
+                            Cancelar
+                        </button>
+                        } @else {
+                        <button class="btn btn-warning btn-sm me-1" (click)="onEdit(item)">
+                            Editar
+                        </button>
+                        <button class="btn btn-danger btn-sm" (click)="onDelete(item.EmpId)">
+                            Eliminar
+                        </button>
+                        }
+                    </td>
+                </tr>
+                } @empty {
+                <tr>
+                    <td colspan="4" class="text-center">No hay registros disponibles.</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,150 @@
+<div class="row mt-3">
+    <button class="btn  col-auto ms-auto" type="button" (click)="dialogAddEmployee();"><i
+            class="bi bi-plus-circle-fill mright"></i>Agregar Empleado</button>
+</div>
+@if (showdialog) {
+<div class="row mt-3">
+
+    <div class="col-md-1">
+        <label for="txtEmpId" class="from-label">CLAVE</label>
+        <input type="text" name="id" id="txtEmpId" class="form-control" [(ngModel)]="Employee_.EmpId" disabled="false">
+    </div>
+    <div class="col-md-4">
+        <label for="txtFullName" class="from-label">EMPLEADO</label>
+        <input type="text" name="id" id="txtFullName" class="form-control" [(ngModel)]="Employee_.FullName">
+    </div>
+    <div class="col-md-2">
+        <label for="txtJoinDate" class="from-label">INGRESO</label>
+        <input type="date" name="id" id="txtJoinDate" class="form-control" [(ngModel)]="Employee_.JoinDate">
+    </div>
+    <div class="col-md-2">
+        <label for="txtBirthDate" class="from-label">F. NACIMIENTO</label>
+        <input type="date" name="id" id="txtBirthDate" class="form-control" [(ngModel)]="Employee_.BirthDate">
+    </div>
+    <div class="col-md-3">
+        <label for="txtDeptId" class="from-label">DEPARTAMENTO</label>
+        <input type="text" name="id" id="txtDeptId" class="form-control" [(ngModel)]="Employee_.DeptId">
+    </div>
+</div>
+<div class="row mt-5">
+    <div class="col">
+        <button class="btn btn-success" type="button" (click)="onAddEmployee(Employee_)">Agregar</button>
+        <!--
+      <button class="btn btn-warning m-2" type="button" (click)="onUpdateEmployee(Employee_)">Modificar</button>
+      <button class="btn btn-danger" type="button" (click)="onDeleteEmployee(Employee_.EmpId)">Eliminar</button>
+      <button class="btn btn-primary m-2" type="button" (click)="clear()">Limpiar</button>-->
+        <button class="btn btn-primary m-2" type="button" (click)="showdialog=false;clear();">Cancelar</button>
+    </div>
+
+</div>
+}
+<div class="row mt-3">
+    <div class="col">
+        <!--
+      <table id="dtEmployee" class="table table-striped" style="width: 100%;">
+        <thead>
+          <tr>
+            <th>Seleccionar</th>
+            <th>CLAVE</th>
+            <th>EMPLEADO</th>
+            <th>INGRESO</th>
+            <th>F. NACIMIENTO</th>
+            <th>DEPARTAMENTO</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (item of datatable(); track item.EmpId) {
+            <tr>
+              <td><input type="button" value="Seleccionar" (click)="onSetData(item)"></td>
+              <td>{{ item.EmpId }} </td>
+              <td>{{ item.FullName }}</td>
+              <td>{{ item.JoinDate | date:'dd/MM/yyyy' }}</td>
+              <td>{{ item.BirthDate | date:'dd/MM/yyyy' }}</td>
+              <td>{{ item.DeptId }}</td>
+            </tr>
+          } @empty {
+              <tr>
+                <td colspan="6">No se encontraron empleados registrados.</td>
+              </tr>
+          }
+          
+        </tbody>
+      </table>-->
+
+        <table class="table table-bordered align-middle">
+            <thead class="table-light">
+                <tr>
+
+                    <th>CLAVE</th>
+                    <th>EMPLEADO</th>
+                    <th>INGRESO</th>
+                    <th>F. NACIMIENTO</th>
+                    <th>DEPARTAMENTO</th>
+                    <th>ACCIONES</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (item of datatable(); track item.EmpId) {
+                <tr>
+                    <td>{{ item.EmpId }}</td>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <input type="text" class="form-control" [(ngModel)]="editRow.FullName" />
+                        } @else {
+
+
+                        {{ item.FullName }}
+                        }
+                    </td>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <input type="date" class="form-control" [(ngModel)]="editRow.JoinDate" />
+                        } @else {
+
+                        {{ item.JoinDate | date:'dd/MM/yyyy' }}
+                        }
+                    </td>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <input type="date" class="form-control" [(ngModel)]="editRow.BirthDate" />
+                        } @else {
+                        <i class="bi bi-cake2-fill"></i>
+                        {{ item.BirthDate | date:'dd/MM/yyyy' }}
+                        }
+                    </td>
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <input type="number" class="form-control" [(ngModel)]="editRow.DeptId" />
+                        } @else {
+                        {{ item.DeptDesc }}
+                        }
+                    </td>
+
+
+                    <td>
+                        @if (editing === item.EmpId) {
+                        <button class="btn btn-success btn-sm me-1" (click)="onSave()">
+                            Guardar
+                        </button>
+                        <button class="btn btn-secondary btn-sm" (click)="onCancel()">
+                            Cancelar
+                        </button>
+                        } @else {
+                        <button class="btn btn-warning btn-sm me-1" (click)="onEdit(item)">
+                            Editar
+                        </button>
+                        <button class="btn btn-danger btn-sm" (click)="onDelete(item.EmpId)">
+                            Eliminar
+                        </button>
+                        }
+                    </td>
+                </tr>
+                } @empty {
+                <tr>
+                    <td colspan="4" class="text-center">No hay registros disponibles.</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

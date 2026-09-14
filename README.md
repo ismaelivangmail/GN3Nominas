@@ -19,6 +19,5 @@ La aplicación se recargará automáticamente cada vez que modifiques alguno de 
 
 El desarrollo del API esta bajo la plataforma .NET, se puede encontrar aqui:
 
-```bash
-https://github.com/ismaelivangmail/ApiNominas
-```
+[https://github.com/ismaelivangmail/ApiNominas](https://github.com/ismaelivangmail/ApiNominas)
+

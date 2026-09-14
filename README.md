@@ -2,7 +2,7 @@
 
 Este proyecto fue creado en [Angular CLI](https://github.com/angular/angular-cli) versión 22.0.0.  
 
-## Development server
+## Pruebas en Desarrrollo
 
 Para iniciar el proyecto, ejecutar comando:
 
@@ -19,4 +19,13 @@ Una vez que compilado con éxito se abrirá  `http://localhost:4200/`.
 El desarrollo del API esta bajo la plataforma .NET, se puede encontrar aqui:
 
 [https://github.com/ismaelivangmail/ApiNominas](https://github.com/ismaelivangmail/ApiNominas)
+
+## Vista Previa
+
+Mi proveedor me tiene sobre CGNAT, por lo cual no puedo compartir mediante No-IP o similares.
+Es necesario instalar [Tailsacale](https://tailscale.com/download) e ingresar a la siguiente dirección:
+
+```bash
+http://100.107.208.55/gn3nomina
+```
 

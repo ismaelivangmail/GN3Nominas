@@ -12,15 +12,23 @@ ng serve -o
 
 Una vez que compilado con éxito se abrirá  `http://localhost:4200/`.
 
-![Captura](https://github.com/ismaelivangmail/GN3Nominas/blob/master/src/assets/images/screenshot.jpg?raw=true)
+## Capturas de Pantalla
 
+### CRUD Empleados
 ![Captura](https://github.com/ismaelivangmail/GN3Nominas/blob/master/src/assets/images/shotemployees.png?raw=true)
 
+### CRUD Departamentos
 ![Captura](https://github.com/ismaelivangmail/GN3Nominas/blob/master/src/assets/images/shotdepartments.png?raw=true)
+
+### CRUD Salarios
 ![Captura](https://github.com/ismaelivangmail/GN3Nominas/blob/master/src/assets/images/shotsalaries.png?raw=true)
+
+### Vista Responsiva
 ![Captura](https://github.com/ismaelivangmail/GN3Nominas/blob/master/src/assets/images/shotresponsive.png?raw=true)
+
+### Validaciones
 ![Captura](https://github.com/ismaelivangmail/GN3Nominas/blob/master/src/assets/images/shotvalidations.png?raw=true)
-)
+
 
 ## Comunicacion con el API 
 

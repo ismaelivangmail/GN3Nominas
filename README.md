@@ -38,10 +38,6 @@ El desarrollo del API esta bajo la plataforma .NET, se puede encontrar aqui:
 
 ## Vista Previa
 
-Mi proveedor me tiene sobre CGNAT, por lo cual no puedo compartir mediante No-IP o similares.
-Es necesario instalar [Tailsacale](https://tailscale.com/download) e ingresar a la siguiente dirección:
+[http://201.145.72.19/gn3nomina](http://201.145.72.19/gn3nomina/)
 
-```bash
-http://100.107.208.55/gn3nomina
-```
 

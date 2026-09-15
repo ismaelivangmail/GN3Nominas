@@ -1,4 +1,4 @@
-# GN3Nominas
+## GN3Nominas
 
 Este proyecto fue creado en [Angular CLI](https://github.com/angular/angular-cli) versión 22.0.0.  
 
@@ -40,7 +40,7 @@ Deberá estar ejecutándose también el API [http://gn3nomina.ddns.net/apinomina
 ### Validaciones
 ![Captura](https://github.com/ismaelivangmail/GN3Nominas/blob/master/src/assets/images/shotvalidations.png?raw=true)
 
-## Comunicacion con el API 
+## Comunicación con el API 
 
 El desarrollo del API esta bajo la plataforma .NET, se puede encontrar aqui:
 

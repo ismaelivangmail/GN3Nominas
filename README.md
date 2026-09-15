@@ -38,6 +38,6 @@ El desarrollo del API esta bajo la plataforma .NET, se puede encontrar aqui:
 
 ## Vista Previa
 
-[http://201.145.72.19/gn3nomina](http://201.145.72.19/gn3nomina/)
+[http://gn3nomina.ddns.net/gn3nomina](http://gn3nomina.ddns.net/gn3nomina/)
 
 

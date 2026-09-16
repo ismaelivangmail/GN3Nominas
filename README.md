@@ -50,4 +50,8 @@ El desarrollo del API esta bajo la plataforma .NET, se puede encontrar aqui:
 
 [http://gn3nomina.ddns.net/gn3nomina](http://gn3nomina.ddns.net/gn3nomina/)
 
+## Android
+
+https://github.com/ismaelivangmail/GN3Nominas/blob/master/src/Gn3noma_Labs.apk
+
 
